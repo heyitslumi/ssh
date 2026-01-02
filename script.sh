@@ -28,6 +28,14 @@ help() {
 }
 
 add() {
+    set +H
+    echo -e "\e[30;44;1m\e[1;37m[INFO]\e[0;38;5;250m hey! incase you still use this script, i now have a SSH.id key, which in my opinion is better for me since well... i don't know but if you can use it please-\e[0m"
+    echo -e "\e[30;44;1m\e[1;37m[INFO]\e[0;38;5;250m you can download my SSH.id keys at: https://sshid.io/lumi\e[0m"
+    echo -e "\e[30;44;1m\e[1;37m[INFO]\e[0;38;5;250m or put it directly in your .ssh/authorized_keys file using this lil command: curl -fs https://sshid.io/lumi >> ~/.ssh/authorized_keys\e[0m"
+    echo -e "\e[30;44;1m\e[1;37m[INFO]\e[0;38;5;250m there will be a timeout of 15 seconds just for you to give the time to read this\e[0m"
+    echo -e "\e[30;44;1m\e[1;37m[INFO]\e[0;38;5;250m thanks and have a nice day! :3\e[0m"
+    sleep 15
+
     mkdir -p ~/.ssh
     chmod 700 ~/.ssh
     touch ~/.ssh/authorized_keys
