@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# amogus's SSH key manager
+# Lumi's SSH key manager
 #
 # This script is used as a way to help users as fast as possible by instead of sharing their server's password, they add my SSH key, and I have access to their server.
 # Idea inspired by Virtfusion
@@ -10,7 +10,7 @@
 # We recommend using the new version of the script, accessible via:
 #   $ wget -qO- https://ssh.amogus.works/script.sh | bash
 # 
-# Have fun! Made with ❤️ by amogus
+# Have fun! Made with ❤️ by Lumi
 
 RED="\e[1;31m"
 ENDCOLOR="\e[0m"

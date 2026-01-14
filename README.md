@@ -6,9 +6,9 @@
 A script to add my SSH key. I don't know why I made it public.
 <br/><br/>
 <a href="https://ssh.amogus.works">Website</a> <b>·</b>
-<a href="mailto:amogusreal69420@proton.me">Contact</a> <b>·</b>
-<a href="https://github.com/amogusreal69/ssh#-command-list">Documentation</a> <b>·</b>
-<a href="https://github.com/amogusreal69/ssh">GitHub Repository</a>
+<a href="mailto:lumi@votion.dev">Contact</a> <b>·</b>
+<a href="https://github.com/heyitslumi/ssh#-command-list">Documentation</a> <b>·</b>
+<a href="https://github.com/heyitslumi/ssh">GitHub Repository</a>
 
 ## 🧩 Introduction
 
@@ -37,17 +37,17 @@ wget -qO- https://ssh.amogus.works/script.sh | bash -s -- check
 
 ## 👥 Contributors
 
-Contributors help shape the future of whatever this is. To start contributing you have to [fork this repository](https://github.com/amogusreal69/ssh/fork) and [open a pull request](https://github.com/amogusreal69/ssh/compare).
+Contributors help shape the future of whatever this is. To start contributing you have to [fork this repository](https://github.com/heyitslumi/ssh/fork) and [open a pull request](https://github.com/heyitslumi/ssh/compare).
 
-[![Contributors repo roster for @amogusreal69/ssh](https://contrib.rocks/image?repo=amogusreal69/ssh)](https://github.com/amogusreal69/ssh/graphs/contributors)
+[![Contributors repo roster for @heyitslumi/ssh](https://contrib.rocks/image?repo=heyitslumi/ssh)](https://github.com/heyitslumi/ssh/graphs/contributors)
 
 ## 🌟 Stargazers
 
-[![Stargazers repo roster for @amogusreal69/ssh](https://reporoster.com/stars/dark/amogusreal69/ssh)](https://github.com/amogusreal69/ssh/stargazers)
+[![Stargazers repo roster for @heyitslumi/ssh](https://reporoster.com/stars/dark/heyitslumi/ssh)](https://github.com/heyitslumi/ssh/stargazers)
 
 ## 📜 Licensing
 
-This project is licensed under the [GNU General Public License v3.0](https://github.com/amogusreal69/ssh/blob/main/LICENSE). If you want to make your own, I will make a documentation soon on this repository.
+This project is licensed under the [GNU General Public License v3.0](https://github.com/heyitslumi/ssh/blob/main/LICENSE). If you want to make your own, I will make a documentation soon on this repository.
 
 ## 💖 Thanks to
 

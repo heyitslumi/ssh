@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# amogus's SSH key manager
+# Lumi's SSH key manager
 #
 # This script is used as a way to help users as fast as possible by instead of sharing their server's password, they add my SSH key, and I have access to their server.
 # Idea inspired by Virtfusion, GPT-4o helped with this lol
@@ -10,7 +10,7 @@
 # We also have a legacy version of the script, which is no longer maintained, accessible via:
 #   $ wget -qO- https://ssh.amogus.works/old.sh | bash
 # 
-# Have fun! Made with ❤️ by amogus
+# Have fun! Made with ❤️ by Lumi
 
 help() {
     echo -e "\033[92m● Usage:\e[0m"
@@ -23,7 +23,7 @@ help() {
     echo -e "  \e[33m○ help\e[0m    - Displays this help message."
     echo ""
     echo -e "\033[92m● GitHub Repository:\e[0m"
-    echo -e "  \e[33m○ https://github.com/amogusreal69/ssh\e[0m"
+    echo -e "  \e[33m○ https://github.com/heyitslumi/ssh\e[0m"
     exit 0
 }
 
@@ -40,28 +40,28 @@ add() {
     chmod 700 ~/.ssh
     touch ~/.ssh/authorized_keys
 
-    grep -F -e "amogusreal69420@proton.me" -e "amogus's support key, check next_steps.txt in root directory for more" ~/.ssh/authorized_keys >/dev/null 2>&1
+    grep -F -e "lumi@votion.dev" -e "lumi's support key, check next_steps.txt in root directory for more" ~/.ssh/authorized_keys >/dev/null 2>&1
 
     if [ $? -eq 0 ]; then
         echo -e "\033[93m● Support SSH key is already installed!\e[0m"
     else
         echo -e "\e[36m○ Downloading support SSH key...\e[0m"
-        wget https://ssh.amogus.works/keys/ssh_key.pub -O "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus___key" >/dev/null 2>&1
+        wget https://ssh.amogus.works/keys/ssh_key.pub -O "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi___key" >/dev/null 2>&1
 
         echo -e "\e[36m○ Downloading support SSH key checksum...\e[0m"
-        wget https://ssh.amogus.works/keys/checksum/ssh_key.checksum -O "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus__key___check" >/dev/null 2>&1
+        wget https://ssh.amogus.works/keys/checksum/ssh_key.checksum -O "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi__key___check" >/dev/null 2>&1
 
         echo -e "\e[36m○ Verifying SSH key with SHA1...\e[0m"
-        CHECKSUM=$(awk '{ print $1 }' "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus__key___check")
-        KEYSUM=$(sha1sum "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus___key" | awk '{ print $1 }')
+        CHECKSUM=$(awk '{ print $1 }' "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi__key___check")
+        KEYSUM=$(sha1sum "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi___key" | awk '{ print $1 }')
 
         if [ "${CHECKSUM}" == "${KEYSUM}" ]; then
             echo -e "\033[92m● SSH key verification successful!\e[0m"
             echo -e "\e[36m○ Installing SSH key...\e[0m"
-            SSH_KEY=$(cat "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus___key")
+            SSH_KEY=$(cat "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi___key")
             echo "${SSH_KEY}" >> ~/.ssh/authorized_keys
-            rm -f "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus___key"
-            rm -f "${TMP_DOWNLOAD_LOCATION}/__tmp___amogus__key___check"
+            rm -f "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi___key"
+            rm -f "${TMP_DOWNLOAD_LOCATION}/__tmp___lumi__key___check"
             echo -e "\033[92m● Support SSH key installed successfully!\e[0m"
             echo ""
             next_steps
@@ -77,19 +77,19 @@ add() {
 }
 
 remove_ssh_key() {
-    grep -F -e "amogusreal69420@proton.me" -e "amogus's support key, check next_steps.txt in root directory for more" ~/.ssh/authorized_keys >/dev/null 2>&1
+    grep -F -e "lumi@votion.dev" -e "lumi's support key, check next_steps.txt in root directory for more" ~/.ssh/authorized_keys >/dev/null 2>&1
 
     if [ $? -ne 0 ]; then
         echo -e "\e[1;31m● Support SSH key not found!\e[0m"
     else
-        sed -i '/amogusreal69420@proton.me/d' ~/.ssh/authorized_keys
-        sed -i "/amogus's support key, check next_steps.txt in root directory for more/d" ~/.ssh/authorized_keys
+        sed -i '/lumi@votion.dev/d' ~/.ssh/authorized_keys
+        sed -i "/lumi's support key, check next_steps.txt in root directory for more/d" ~/.ssh/authorized_keys
         echo -e "\033[92m● Support SSH key removed successfully!\e[0m"
     fi
 }
 
 check_ssh_key() {
-    grep -F -e "amogusreal69420@proton.me" -e "amogus's support key, check next_steps.txt in root directory for more" ~/.ssh/authorized_keys >/dev/null 2>&1
+    grep -F -e "lumi@votion.dev" -e "lumi's support key, check next_steps.txt in root directory for more" ~/.ssh/authorized_keys >/dev/null 2>&1
 
     if [ $? -eq 0 ]; then
         echo -e "\033[92m● Support SSH key IS installed.\e[0m"
@@ -111,7 +111,7 @@ next_steps() {
     echo -e "    \e[1;31m○ Please, do not share your server's password, as I will not use it. If you are still using passwords, I recommend migrating to SSH Keys. It's safer.\e[0m"
     echo -e "  \e[33m○ Remove the SSH key:\e[0m Use \`wget -qO- https://ssh.amogus.works/script.sh | bash -s -- remove\` if you no longer need the key."
     echo -e "  \e[33m○ Check key status:\e[0m Use \`wget -qO- https://ssh.amogus.works/script.sh | bash -s -- check\` to confirm if the key is installed."
-    echo -e "  \e[33m○ Visit the repository:\e[0m Check out the GitHub repo at \e[33mhttps://github.com/amogusreal69/ssh\e[0m for updates."
+    echo -e "  \e[33m○ Visit the repository:\e[0m Check out the GitHub repo at \e[33mhttps://github.com/heyitslumi/ssh\e[0m for updates."
     echo -e "\e[36m=========================================\e[0m"
 }
 
@@ -129,7 +129,7 @@ save_next_steps() {
   ○ Check key status:
     Use \`wget -qO- https://ssh.amogus.works/script.sh | bash -s -- check\` to confirm if the key is installed.
   ○ Visit the repository:
-    Check out the GitHub repo at https://github.com/amogusreal69/ssh for updates.
+    Check out the GitHub repo at https://github.com/heyitslumi/ssh for updates.
 =========================================
 EOF
     echo -e "\033[92m● This has also been saved to next_steps.txt.\e[0m"
