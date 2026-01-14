@@ -12,7 +12,7 @@ A script to add my SSH key. I don't know why I made it public.
 
 ## 🧩 Introduction
 
-This is just a simple script to manage my support SSH key. The previous script is located at https://cdn.lowtaperfade.art. What am I supposed to explain here even-
+This is just a simple script to manage my support SSH key. What am I supposed to explain here even-
 
 ## 📷 Showcase
 
